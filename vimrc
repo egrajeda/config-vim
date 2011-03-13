@@ -1,3 +1,16 @@
+" GENERAL
+
+" Me gusta usar espacios, no tabulación
+set shiftwidth=4
+set tabstop=4
+set expandtab
+set softtabstop=4
+
+syntax on
+
+set nowrap
+set autoindent
+
 " APARIENCIA
 
 " Creo que esto es lo mínimo que necesito
@@ -16,18 +29,6 @@ set listchars=eol:¶,trail:•
 set list
 hi NonText    guifg=#373832 guibg=bg
 hi SpecialKey guifg=#676862 guibg=bg
-
-syntax on
-
-set nowrap
-set autoindent
-
-" ESTÁNDARES
-
-" Me gusta usar espacios, no tabulación
-set shiftwidth=4
-set tabstop=4
-set expandtab
 
 " KEYBINDINGS
 
