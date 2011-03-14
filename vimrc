@@ -6,6 +6,11 @@ set tabstop=4
 set expandtab
 set softtabstop=4
 
+" Prefiero no tener backups
+set nobackup
+set nowritebackup
+set noswapfile
+
 syntax on
 
 set nowrap
