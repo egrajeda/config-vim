@@ -1,4 +1,6 @@
-" GENERAL
+" Voy a empezar a usar Vim en la terminal, asi que me gustaría activar los
+" 256 colores
+set t_Co=256
 
 " Me gusta usar espacios, no tabulación
 set shiftwidth=4
@@ -11,6 +13,10 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Cuando usas autocompletación de archivos, que arriba te muestre un listado
+" de las posibles ocurrencias
+set wildmenu
+
 syntax on
 
 set nowrap
@@ -21,21 +27,31 @@ set autoindent
 " Creo que esto es lo mínimo que necesito
 set guioptions=a
 
-" Con una DPI de 87 esta fuente se ve perfecta
-set guifont=Inconsolata\ 10
+" En Ubuntu con DPI 77 se ve mejor este tamaño
+set guifont=Inconsolata\ 12
 
 " Mi versión modificada de molokai (yo le quité lo bold)
 let g:molokai_original = 1
 colorscheme molokai
 
+" Siempre mostrar la barra de estado
+set laststatus=2
+
+set number
+set numberwidth=5
+
+set showmatch
+set incsearch
+
+
 " En algún lugar vi esto, y me pareció bueno ponerlo :P, te muestra los
 " fines de linea y los espacios extras al final de las lineas
-set listchars=eol:¶,trail:•
+set listchars=eol:¶,trail:•,tab:××
 set list
-hi NonText    guifg=#373832 guibg=bg
-hi SpecialKey guifg=#676862 guibg=bg
-
-" KEYBINDINGS
+hi NonText      ctermfg=234     ctermbg=bg
+hi SpecialKey   ctermfg=236
+hi IncSearch    ctermfg=fg      ctermbg=bg  cterm=underline
+hi VertSplit    ctermfg=233     ctermbg=233
 
 " Es más conveniente para no tener que estar apretando Shift
 nm , :
