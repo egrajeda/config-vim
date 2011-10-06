@@ -37,8 +37,8 @@ colorscheme champoo
 " Siempre mostrar la barra de estado
 set laststatus=2
 
-set number
-set numberwidth=5
+" Contenido de la barra de estado
+set statusline=%03.3l,%03.3v\ •\ %f\ %m%=%{fugitive#statusline()}
 
 set showmatch
 set incsearch
