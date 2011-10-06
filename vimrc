@@ -15,6 +15,7 @@ set noswapfile
 
 " Cuando usas autocompletación de archivos, que arriba te muestre un listado
 " de las posibles ocurrencias
+set wildmode=longest,full
 set wildmenu
 
 syntax on
@@ -30,9 +31,8 @@ set guioptions=a
 " En Ubuntu con DPI 77 se ve mejor este tamaño
 set guifont=Inconsolata\ 12
 
-" Mi versión modificada de molokai (yo le quité lo bold)
-let g:molokai_original = 1
-colorscheme molokai
+" Mi propio tema
+colorscheme champoo
 
 " Siempre mostrar la barra de estado
 set laststatus=2
@@ -47,15 +47,6 @@ set incsearch
 " fines de linea y los espacios extras al final de las lineas
 set listchars=eol:¶,trail:•,tab:××
 set list
-hi Normal       ctermfg=231
-hi NonText      ctermfg=234     ctermbg=bg
-hi SpecialKey   ctermfg=236
-hi IncSearch    ctermfg=fg      ctermbg=bg  cterm=underline
-hi VertSplit    ctermfg=233     ctermbg=233
-
-hi htmlItalic                               cterm=none
-
-hi javaScript   ctermfg=fg      ctermbg=bg
 
 " Es más conveniente para no tener que estar apretando Shift
 nm , :
@@ -74,3 +65,5 @@ au! BufWritePost *.php call CheckPHPSyntax()
 let &t_SI = "\033]12;white\007"
 let &t_EI = "\033]12;white\007"
 
+" Estos son algunos errores comunes que hago cuando programo
+iab This this
