@@ -67,3 +67,6 @@ let &t_EI = "\033]12;white\007"
 
 " Estos son algunos errores comunes que hago cuando programo
 iab This this
+
+" Quiero que GLVS instale los paquetes automáticamente
+let g:GetLatestVimScripts_allowautoinstall=1
