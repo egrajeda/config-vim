@@ -51,9 +51,12 @@ set list
 " Es más conveniente para no tener que estar apretando Shift
 nm , :
 
+" El mapleader es ñ
+let mapleader = "ñ"
+
 " Normal mode maps
-nm ñd <C-]>
-nm ñt <C-T>
+" nm ñd <C-]>
+" nm ñt <C-T>
 
 fun! CheckPHPSyntax()
     let error = substitute(system("php -l " . expand("%") .  " 2>&1 | sed 's/.*\ //g' | head -n 1 | grep '^[0-9]\\+$'"), "\n", "", "")
